@@ -1,5 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
+
 body {
   background-image: url(img/city.jpg);
   background-position: center;
   background-size: cover;
+  box-sizing: border-box;
+  font-family: "Comfortaa", cursive;
+  text-align: center;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 800;
+  color: rgb(211, 241, 103);
+  background-color: #ffff;
+  margin: 24px auto;
+  max-width: 415px;
+  border-radius: 5px;
+}
+
+input {
+  padding: 20px;
+}
+
+.search-form {
+  margin: 5px auto;
+  max-width: 400px;
 }

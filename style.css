@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap");
 
+:root {
+  --main-color: rgb(149, 159, 0);
+}
+
 body {
   background-image: url(img/city.jpg);
   background-position: center;
@@ -19,18 +23,71 @@ body {
 h1 {
   font-size: 35px;
   font-weight: 800;
-  color: rgb(211, 241, 103);
-  background-color: #ffff;
+  color: var(--main-color);
+  background-color: #fffc;
   margin: 24px auto;
   max-width: 415px;
   border-radius: 5px;
 }
 
-input {
-  padding: 20px;
-}
-
 .search-form {
   margin: 5px auto;
   max-width: 400px;
+}
+
+input {
+  padding: 15px 30px;
+}
+
+input.search {
+  background-color: rgba(255, 255, 255, 0.903);
+  border: 3px solid var(--main-color);
+  border-radius: 5px;
+  font-size: 18px;
+  /* left: -10%;
+    position: relative; */
+  text-align: center;
+  /* top: 10px;
+    width: 270px;*/
+  z-index: 2;
+}
+
+input.search::placeholder {
+  color: var(--main-color);
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.suggestions li {
+  background-color: var(--main-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.903);
+  color: #fffc;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+}
+
+.suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(
+    to bottom,
+    var(--main-color) 0%,
+    rgb(180, 193, 0) 100%
+  );
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(
+    to top,
+    var(--main-color) 0%,
+    rgb(129, 138, 0) 100%
+  );
 }

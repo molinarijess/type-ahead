@@ -25,14 +25,14 @@ h1 {
   font-weight: 800;
   color: var(--main-color);
   background-color: #fffc;
-  margin: 24px auto;
+  margin: 40px auto 0;
   max-width: 415px;
   border-radius: 5px;
 }
 
 .search-form {
   margin: 5px auto;
-  max-width: 400px;
+  max-width: 297px;
 }
 
 input {
@@ -44,11 +44,10 @@ input.search {
   border: 3px solid var(--main-color);
   border-radius: 5px;
   font-size: 18px;
-  /* left: -10%;
-    position: relative; */
+  position: relative;
   text-align: center;
-  /* top: 10px;
-    width: 270px;*/
+  top: 4px;
+  width: 300px;
   z-index: 2;
 }
 
@@ -90,4 +89,12 @@ input.search::placeholder {
     var(--main-color) 0%,
     rgb(129, 138, 0) 100%
   );
+}
+
+span.population {
+  font-size: 15px;
+}
+
+.hl {
+  background: rgb(239, 255, 14);
 }

@@ -5,13 +5,19 @@
 }
 
 body {
-  background-image: url(img/city.jpg);
-  background-position: center;
+  background: url(img/city.jpg) no-repeat center;
   background-size: cover;
   box-sizing: border-box;
   font-family: "Comfortaa", cursive;
+  height: 50vh;
+  max-width: 100%;
   text-align: center;
-  width: 100%;
+}
+
+@media (max-width: 600px) {
+  body {
+    height: 100vh;
+  }
 }
 
 *,
@@ -32,7 +38,7 @@ h1 {
 
 .search-form {
   margin: 5px auto;
-  max-width: 297px;
+  max-width: 270px;
 }
 
 input {
@@ -56,12 +62,14 @@ input.search::placeholder {
 }
 
 .suggestions {
+  left: 15px;
   margin: 0;
   padding: 0;
   position: relative;
 }
 
 .suggestions li {
+  align-items: center;
   background-color: var(--main-color);
   border-bottom: 1px solid rgba(255, 255, 255, 0.903);
   color: #fffc;
@@ -91,10 +99,16 @@ input.search::placeholder {
   );
 }
 
+span {
+  text-align: center;
+  text-transform: capitalize;
+}
+
 span.population {
-  font-size: 15px;
+  font-size: 12px;
+  font-style: italic;
 }
 
 .hl {
-  background: rgb(239, 255, 14);
+  background: rgba(239, 255, 14, 0.335);
 }
